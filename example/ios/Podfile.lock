@@ -1,0 +1,41 @@
+PODS:
+  - dh_native_photo (0.0.1):
+    - Flutter
+    - Masonry
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - LookinServer (1.1.7):
+    - LookinServer/Core (= 1.1.7)
+  - LookinServer/Core (1.1.7)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - dh_native_photo (from `.symlinks/plugins/dh_native_photo/ios`)
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - LookinServer
+
+SPEC REPOS:
+  trunk:
+    - LookinServer
+    - Masonry
+
+EXTERNAL SOURCES:
+  dh_native_photo:
+    :path: ".symlinks/plugins/dh_native_photo/ios"
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  dh_native_photo: 0ce7f778340c0be68f981218d268b061e0758e05
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  LookinServer: 4ce0469b066871525611d009d8d16a7a50c23491
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: c5fd9cae231abc02aa42c1e5aeba851694339bc7
+
+COCOAPODS: 1.12.1
