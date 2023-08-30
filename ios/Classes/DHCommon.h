@@ -14,7 +14,7 @@
 /** 通过name及Bundle获取图片*/
 #define SmartBundleImageNamed(imageName,bundleName) [UIImage imageNamed:imageName inBundle:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"]] compatibleWithTraitCollection:nil]
 
-#define SmartImageNamed(imageName) [UIImage imageNamed:imageName inBundle:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"DHNativePhoto" ofType:@"bundle"]] compatibleWithTraitCollection:nil]
+#define SmartImageNamed(imageName) [UIImage imageNamed:imageName inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"DHNativePhoto" ofType:@"bundle"]] compatibleWithTraitCollection:nil]
 
 
 #define ZWTStatusBarHeight ({\

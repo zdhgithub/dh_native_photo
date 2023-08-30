@@ -1,6 +1,8 @@
 #import "DhNativePhotoPlugin.h"
 #import "DDPhotoViewController.h"
 #import "FtspPhotograph.h"
+#import "UIControl+UIBarButtonItem.h"
+
 
 static FLTTakePhotoFlutterApi *takePhotoFlutterApi;
 
@@ -40,6 +42,11 @@ static FLTTakePhotoFlutterApi *takePhotoFlutterApi;
 }
 
 - (void)takeCardPhotoIsBack:(nonnull NSNumber *)isBack completion:(nonnull void (^)(FlutterStandardTypedData * _Nullable, FlutterError * _Nullable))completion {
+    
+    if([[self viewControllerWithWindow:nil] isKindOfClass:[DDPhotoViewController class]]){
+        return;
+    }
+    
     DDPhotoViewController *vc = [[DDPhotoViewController alloc] init];
     vc.modalPresentationStyle = UIModalPresentationFullScreen;
     vc.imageblock = ^(UIImage *image) {
@@ -57,6 +64,10 @@ static FLTTakePhotoFlutterApi *takePhotoFlutterApi;
 
 - (void)takeSelfPhotoIsHand:(nonnull NSNumber *)isHand completion:(nonnull void (^)(FlutterStandardTypedData * _Nullable, FlutterError * _Nullable))completion {
 
+    if([[self viewControllerWithWindow:nil] isKindOfClass:[FtspPhotograph class]]){
+        return;
+    }
+    
     FtspPhotograph * vc = [[FtspPhotograph alloc]init];
     vc.modalPresentationStyle = UIModalPresentationFullScreen;
     vc.isHand = isHand.boolValue;

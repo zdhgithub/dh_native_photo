@@ -6,6 +6,7 @@
 #import "DDPhotoViewController.h"
 #import <Photos/Photos.h>
 #import "DHCommon.h"
+#import "UIControl+UIBarButtonItem.h"
 
 
 
@@ -119,6 +120,7 @@
 -(UIButton *)PhotoButton{
     if (_PhotoButton == nil) {
         _PhotoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _PhotoButton.cjr_acceptEventInterval = 3;
         _PhotoButton.frame = CGRectMake(kScreenWidth/2.0-30, 10, 60, 60);
         [_PhotoButton setImage:SmartImageNamed(@"infowrite_photograph_Select") forState: UIControlStateNormal];
         [_PhotoButton setImage:SmartImageNamed(@"infowrite_photograph_Select") forState:UIControlStateNormal];

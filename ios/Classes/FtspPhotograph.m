@@ -8,6 +8,7 @@
 #import "FtspPhotograph.h"
 #import <Masonry/Masonry.h>
 #import "DHCommon.h"
+#import "UIControl+UIBarButtonItem.h"
 
 
 @interface FtspPhotograph ()
@@ -230,6 +231,7 @@
     [self.view addSubview:_downView];
     //加上相机按钮和其他的自定义按钮
     _photoButotn = [[UIButton alloc] init];
+    _photoButotn.cjr_acceptEventInterval = 3;
     [_photoButotn setBackgroundImage:SmartImageNamed(@"toke_photo_f") forState:UIControlStateNormal];
     [_photoButotn addTarget:self action:@selector(SavePhoto:) forControlEvents:UIControlEventTouchUpInside];
     [_downView addSubview:_photoButotn];
